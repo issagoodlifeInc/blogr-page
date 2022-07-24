@@ -1,7 +1,88 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  /* ### Primary */
+  /* (CTA text) */
+  --lightred: hsl(356, 100%, 66%);
+  /* (CTA hover background) */
+  --vlightred: hsl(355, 100%, 74%);
+  /* (headings) */
+  --vdkblue: hsl(208, 49%, 24%);
+
+  /* ### Neutral */
+  /*  (text) */
+  --white: hsl(0, 0%, 100%);
+  /* (footer text) */
+  --grayblue: hsl(240, 2%, 79%);
+  /* (body copy) */
+  --vdkgrayblue: hsl(207, 13%, 34%);
+  /* (footer background) */
+  --vdkblackblue: hsl(240, 10%, 16%);
+  /* ### Neutral */
+
+  /* Font */
+  /* Overpass 300 light, 600 SemiBold */
+  --overpass: "Overpass", sans-serif;
+  /* Ubuntu 400Regular, 500Medium, 700Bold */
+  --ubuntu: "Ubuntu", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 40em) {
+  .primary-header {
+    background: linear-gradient(
+      var(--vlightred),
+      var(--lightred) /* url("./images/bg-pattern-intro-mobile.svg") */
+    );
+  }
+  .container {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .primary-navigation {
+    position: absolute;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+
+  .btn-close {
+    display: none;
+  }
+
+  .nav-div {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+  }
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+.attribution a:hover {
+  color: var(--vdkblue);
 }
