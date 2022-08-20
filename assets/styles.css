@@ -2,6 +2,8 @@
 *::after,
 *::before {
   box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
 
 :root {
@@ -47,17 +49,36 @@ button {
 
 @media (max-width: 40em) {
   .primary-header {
-    background: linear-gradient(
-      var(--vlightred),
-      var(--lightred) /* url("./images/bg-pattern-intro-mobile.svg") */
-    );
+    background: url("./images/bg-pattern-intro-mobile.svg"),
+      linear-gradient(
+        var(--vlightred),
+        var(--lightred) /* url("./images/bg-pattern-intro-mobile.svg") */
+      );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
   }
+
   .container {
     width: 95%;
     margin: 0 auto;
   }
+
+  .logo {
+    width: 80%;
+  }
   .primary-navigation {
     position: absolute;
+    display: none;
+    top: 4.5rem;
+    width: 90%;
+    margin: auto;
+    background: var(--white);
+    border-radius: 5px;
+  }
+
+  .primary-navigation.open {
+    display: block;
   }
 
   .mobile-nav {
@@ -72,6 +93,10 @@ button {
     display: flex;
     justify-content: space-between;
     padding: 1.5rem 0;
+  }
+
+  .nav-list {
+    text-align: center;
   }
 }
 
