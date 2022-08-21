@@ -217,14 +217,12 @@ ul {
   }
 
   .future--img {
-    position: relative;
+    width: 50%;
   }
 
   .future--img img {
     width: 100%;
-    position: absolute;
-    right: 0;
-    top: 0;
+    transform: translateX(5rem);
   }
   /* Main Content */
 }
@@ -380,6 +378,7 @@ ul {
 
 main img {
   width: 100%;
+  display: block;
 }
 
 .flex {
@@ -412,6 +411,21 @@ main p {
 .future--heading {
   text-align: center;
   font-weight: 600;
+}
+
+.infrastructure {
+  background: var(--vdkblackblue);
+  color: var(--white);
+  border-radius: 0 100px 0 100px;
+}
+
+.infra--img {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.infra--img img {
+  transform: translateY(-2.5rem);
 }
 
 /* MAIN SECTION STYLING */
