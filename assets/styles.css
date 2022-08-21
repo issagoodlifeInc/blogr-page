@@ -37,6 +37,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: var(--ubuntu);
+  font-size: 1rem;
 }
 
 button {
@@ -44,10 +45,54 @@ button {
   border: none;
   font-family: var(--ubuntu);
   font-weight: 500;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--overpass);
 }
 
 .mobile-nav {
   display: none;
+}
+
+.primary-header {
+  color: var(--grayblue);
+  text-align: center;
+}
+
+.header-title {
+  color: var(--white);
+}
+
+.header-text {
+  font-size: 1rem;
+}
+
+.btn-header,
+.btn-navbar {
+  font-family: var(--overpass);
+  font-weight: 600;
+  padding: 0.7rem 1rem;
+  border-radius: 50px;
+}
+
+.btn-start,
+.btn-navbar_signup {
+  color: var(--lightred);
+  background: var(--white);
+}
+
+.btn-navbar_login,
+.btn-learn {
+  color: var(--grayblue);
+}
+
+.btn-learn {
+  border: 1px solid var(--grayblue);
 }
 
 @media (max-width: 40em) {
@@ -60,6 +105,11 @@ button {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left;
+    min-height: 60vh;
+  }
+  .header-body {
+    width: 90%;
+    margin: 7vh auto;
   }
 
   .container {
@@ -71,12 +121,14 @@ button {
     width: 80%;
   }
   .primary-navigation {
+    transition: 0.2s ease-in-out;
     position: absolute;
     display: none;
     top: 4.5rem;
     width: 90%;
     background: var(--white);
     border-radius: 5px;
+    padding-bottom: 2rem;
   }
 
   .primary-navigation.open {
@@ -93,11 +145,15 @@ button {
     color: var(--vdkblue);
   }
 
+  .nav-main--items {
+    padding-bottom: 1rem;
+  }
+
   .nav-list--secondary {
+    display: none;
     width: 80%;
     margin: 1rem auto;
     border-radius: 5px;
-
     background: var(--grayblue);
   }
 
@@ -123,6 +179,7 @@ button {
   }
 
   .nav-list {
+    padding-top: 1.5rem;
     text-align: center;
   }
 
@@ -132,7 +189,6 @@ button {
     margin: 1rem auto;
     font-size: 1rem;
     opacity: 1;
-    transition: all 0.5s ease-in-out;
   }
 
   .btn-navbar_login {
@@ -143,10 +199,10 @@ button {
   }
 
   .btn-navbar_signup {
+    transition: all 0.2s ease-in;
     color: var(--white);
     background: linear-gradient(to right, var(--vlightred), var(--lightred));
-    border-radius: 50px;
-    padding: 0.7rem 1.8rem;
+    padding-inline: 1.8rem;
   }
   .btn-navbar_signup:hover {
     background: var(--vlightred);
