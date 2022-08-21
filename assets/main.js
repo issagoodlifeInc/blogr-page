@@ -4,6 +4,7 @@ const btnClose = document.getElementById("btn-close");
 const navbar = document.querySelector("nav");
 
 const mainLinks = document.querySelectorAll(".nav-link_main");
+// eslint-disable-next-line no-unused-vars
 const secondaryLinks = document.querySelectorAll(".nav-list--secondary");
 
 btnOpen.addEventListener("click", () => {
@@ -20,7 +21,6 @@ btnClose.addEventListener("click", () => {
 
 mainLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
-    console.log(e.target);
     e.target.children[0].classList.toggle("point-up");
 
     if (e.target.children[0].classList.contains("point-up")) {
