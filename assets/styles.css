@@ -259,13 +259,9 @@ footer {
 /* Footer styling */
 
 .attribution {
-  /* position: absolute; */
   font-size: 11px;
   text-align: center;
-  /* top: 50%; */
-  /* left: 50%; */
-  /* bottom: 0; */
-  /* transform: translate(-50%, -50%); */
+  color: var(--white);
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
@@ -273,7 +269,7 @@ footer {
 }
 
 .attribution a:hover {
-  color: var(--vdkblackblue);
+  color: var(--lightred);
 }
 
 /* @Medias handling majorly navigation - */
