@@ -162,11 +162,11 @@ main img {
 }
 
 .future--heading,
-main h2 {
+main h3 {
   color: var(--vdkblue);
 }
 
-main h2 {
+main h3 {
   font-size: 1.2rem;
 }
 
@@ -227,7 +227,6 @@ footer {
 
 .footer .footer-main_item {
   color: var(--white);
-  padding-bottom: 1.5rem;
   display: inline-block;
 }
 
@@ -546,6 +545,10 @@ footer {
   /* Footer */
   footer {
     text-align: center;
+  }
+
+  .footer .logo {
+    padding-bottom: 1.5rem;
   }
 }
 
